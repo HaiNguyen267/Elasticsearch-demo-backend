@@ -1,0 +1,36 @@
+{
+  "analysis": {
+    "analyzer": {
+      "asciifolding_analyzer": {
+        "tokenizer": "standard",
+        "char_filter": [
+
+        ],
+        "filter": [
+          "lowercase",
+          "asciifolding"
+        ]
+      },
+      "autocomplete_analyzer": {
+        "tokenizer": "autocomplete",
+        "char_filter": [
+        ],
+        "filter": [
+          "lowercase",
+          "asciifolding"
+        ]
+      }
+    },
+    "tokenizer": {
+      "autocomplete": {
+        "type": "edge_ngram",
+        "min_gram": 2,
+        "max_gram": 20,
+        "token_chars": [
+          "letter",
+          "digit"
+        ]
+      }
+    }
+  }
+}
